@@ -7,6 +7,7 @@ class Tile:
 
 
 class BagTiles:
+    #Constructor
     def __init__(self):
         self.tiles = [
             Tile('A', 1),
@@ -37,7 +38,6 @@ class BagTiles:
             Tile('RR', 8),
             Tile('X', 8),
             Tile('Z', 10),
-
         ]
         random.shuffle(self.tiles)
 
@@ -46,10 +46,6 @@ class BagTiles:
         for _ in range(count):
             tiles.append(self.tiles.pop())
         return tiles
-
+    
     def put(self, tiles):
         self.tiles.extend(tiles)
-
-    
-
-
