@@ -7,9 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.1.1] - 2023-03-05
+## [1.1.1] - 2023-08-27
 
 ### Added
+      
     -Implemented the Tile class to represent a Scrabble tile with letters and values.
     -Implemented the BagTiles class to represent the Scrabble tile bag.
     -The tile bag is initialized with all Scrabble tiles and shuffled randomly.
@@ -29,5 +30,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     
     -Implemented the Player class to represent a player in the game.
     -Created a list of tiles (tiles) for the player upon initialization.
+    
+
+## [1.1.1] - 2023-08-28
+
+### Added
+
+    -Implemented the Cell class to represent a cell on a word game board (e.g., Scrabble).
+    -Each cell holds information about the multiplier and multiplier type (multiplier and multiplier_type) applied to tiles placed on it.
+    -Cells can hold a letter (letter) if a tile is placed on them.
+    -Provided an add_letter(letter: Tile) method to add a letter to the cell.
+    -Provided a calculate_value() method to calculate the value of the cell, considering the multiplier type and the letter contained in it.
+
 
 
