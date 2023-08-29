@@ -42,5 +42,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -Provided an add_letter(letter: Tile) method to add a letter to the cell.
     -Provided a calculate_value() method to calculate the value of the cell, considering the multiplier type and the letter contained in it.
 
+### Added
+
+   -Added the draw_tile method to the Player class to allow players to draw tiles and add them to their hand.
+   -Added the test_draw_tile test case to the TestPlayer test suite.
+   -Created an instance of the Player class for testing.
+   -Added a tile "B" to the player's hand using the draw_tile method.
+   -Verified that the tile "A" is not present in the player's hand using the self.assertNotIn assertion.
 
 

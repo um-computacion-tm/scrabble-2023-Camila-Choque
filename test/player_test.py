@@ -9,8 +9,16 @@ class TetsPlayer(unittest.TestCase):
             len(player_1.tiles),
             0,
 
-
          )
+        
+
+class TestPlayer(unittest.TestCase):
+    def test_draw_tile(self):
+        player = Player()
+        player.draw_tile("B")
+        self.assertNotIn("A", player.hand)
+
+
         
 
 
