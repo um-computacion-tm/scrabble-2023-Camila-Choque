@@ -50,4 +50,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
    -Added a tile "B" to the player's hand using the draw_tile method.
    -Verified that the tile "A" is not present in the player's hand using the self.assertNotIn assertion.
 
+## [1.1.1] - 2023-08-29
 
+### Added
+
+    -The draw_tiles method takes two arguments: bag (an instance of the BagTiles class) and num_tiles (the number of tiles 
+     the player wants  to draw from the bag).
+    -The method checks if the requested number of tiles (num_tiles) is less than or equal to the number of tiles in the bag (bag.tiles).
+    -If the condition is met, the method adds the specified tiles (num_tiles) to the player's hand (self.tiles) 
+     using extend and then     removes those tiles from the bag using del bag.tiles[:num_tiles]
+     -Modifications were made to the 'draw_tiles' test.
+     
+    -Added the exchange_tiles method to the Player class to facilitate tile exchange between a player and a bag of tiles.
+    -The method takes two arguments: bag (an instance of the BagTiles class) and tiles_to_exchange (a list of tiles to exchange).
+    -It checks if all the specified tiles in tiles_to_exchange are present in the player's hand (self.tiles).
+    -If all the specified tiles are found, the method extends the bag with the exchanged tiles (tiles_to_exchange) 
+     and removes these tiles from the player's hand.
+    -The method returns True if the exchange is successful, indicating that the tiles were successfully exchanged.
+    -If the condition is not met, it returns False, indicating that the exchange was not possible due to missing tiles in the player's hand.
