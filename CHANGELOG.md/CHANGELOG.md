@@ -68,3 +68,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
      and removes these tiles from the player's hand.
     -The method returns True if the exchange is successful, indicating that the tiles were successfully exchanged.
     -If the condition is not met, it returns False, indicating that the exchange was not possible due to missing tiles in the player's hand.
+    
+### Added
+    
+    -Implemented the check_tile_in_hand method in the Player class.
+    -This method allows players to check if a specific tile is present in their hand.
+    -A test for this method was created.
+    -Implemented the get_hand_size method in the Player class.
+    -This method allows players to retrieve the current size of their hand, i.e., how many tiles they have in their hand at a given moment.
+    -A test for this method was created.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

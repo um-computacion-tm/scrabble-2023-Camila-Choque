@@ -36,6 +36,22 @@ class TetsPlayer(unittest.TestCase):
         self.assertEqual(len(bag_tiles.tiles), initial_bag_count + 2)
 
 
+    def test_check_tile_in_hand(self):
+    
+        player = Player()
+        player.tiles = ["A", "B", "C", "D", "E"]
+        self.assertEqual(player.check_tile_in_hand("B"), True)
+        self.assertEqual(player.check_tile_in_hand("X"), False)
+
+    
+    def test_get_hand_size(self):
+        
+        player = Player()
+        player.tiles = ["A", "B", "C", "D", "E"]
+        hand_size = player.get_hand_size()
+        self.assertEqual(hand_size, 5)
+
+
 
         
 
