@@ -89,6 +89,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -A test for this method was created.
     -There are tests left to correct.
     
+## [1.1.1] - 2023-09-07
+
+### Added
+   
+    -Implemented the place_tiles method in the Board class to allow the placement of tiles on the Scrabble board.
  
     
     

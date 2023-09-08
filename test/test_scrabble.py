@@ -40,5 +40,7 @@ class TestScrabbleGame(unittest.TestCase):
         assert scrabble_game.current_player == scrabble_game.players[0]
 
 
+  
+
 if __name__ == '__main__':
     unittest.main()
