@@ -15,12 +15,9 @@ class TestBoard(unittest.TestCase):
         )
 
 
-class TestPlaceTiles(unittest.TestCase):
-    def setUp(self):
-        # Crea una instancia de la clase Board para cada prueba
-        self.board = Board()
 
     
+
 
 
 if __name__ == '__main__':

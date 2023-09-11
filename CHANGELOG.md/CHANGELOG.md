@@ -103,6 +103,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
    -Created the TestPlaceTiles class for performing unit tests of the place_tiles function in the 
    Board class (Modifications must be   made.).
    
+## [1.1.1] - 2023-09-09
+
+### Added
+    
+    -Implemented the initial_tiles function to define initial tiles and their quantities in the Spanish Scrabble game.
+
+
+
    
     
     
