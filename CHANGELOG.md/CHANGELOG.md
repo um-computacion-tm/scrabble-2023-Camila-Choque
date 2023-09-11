@@ -78,7 +78,40 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -This method allows players to retrieve the current size of their hand, i.e., how many tiles they have in their hand at a given moment.
     -A test for this method was created.
     
+## [1.1.1] - 2023-09-06
+
+### Added
+  
     
+    -Implemented the next_turn method in the ClassName class to switch to the next player in the game's turn.
+    -If the current player is None, it is set as the first player in the list of players.
+    -If there is already a current player, it switches to the next player in the list of players.
+    -A test for this method was created.
+    -There are tests left to correct.
+    
+## [1.1.1] - 2023-09-07
+
+### Added
+   
+    -Implemented the place_tiles method in the Board class to allow the placement of tiles on the Scrabble board.
+ 
+    
+## [1.1.1] - 2023-09-08
+
+### Added
+   
+   -Created the TestPlaceTiles class for performing unit tests of the place_tiles function in the 
+   Board class (Modifications must be   made.).
+   
+## [1.1.1] - 2023-09-09
+
+### Added
+    
+    -Implemented the initial_tiles function to define initial tiles and their quantities in the Spanish Scrabble game.
+
+
+
+   
     
     
     
