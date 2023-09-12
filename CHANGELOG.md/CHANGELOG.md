@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.1.1] - 2023-08-27
+## [0.0.1] - 2023-08-27
 
 ### Added
       
@@ -16,6 +16,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -The tile bag is initialized with all Scrabble tiles and shuffled randomly.
     -Provided a take(count) method to take a specified number of tiles from the bag.
     -Provided a put(tiles) method to return tiles to the bag.
+    
+## [0.0.2] - 2023-08-27
 
 ### Added
     
@@ -32,7 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -Created a list of tiles (tiles) for the player upon initialization.
     
 
-## [1.1.1] - 2023-08-28
+## [0.0.3] - 2023-08-28
 
 ### Added
 
@@ -42,6 +44,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -Provided an add_letter(letter: Tile) method to add a letter to the cell.
     -Provided a calculate_value() method to calculate the value of the cell, considering the multiplier type and the letter contained in it.
 
+## [0.0.4] - 2023-08-28
+
 ### Added
 
    -Added the draw_tile method to the Player class to allow players to draw tiles and add them to their hand.
@@ -50,7 +54,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
    -Added a tile "B" to the player's hand using the draw_tile method.
    -Verified that the tile "A" is not present in the player's hand using the self.assertNotIn assertion.
 
-## [1.1.1] - 2023-08-29
+## [0.0.5] - 2023-08-29
 
 ### Added
 
@@ -68,7 +72,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
      and removes these tiles from the player's hand.
     -The method returns True if the exchange is successful, indicating that the tiles were successfully exchanged.
     -If the condition is not met, it returns False, indicating that the exchange was not possible due to missing tiles in the player's hand.
-    
+   
+## [0.0.6] - 2023-08-29
+
 ### Added
     
     -Implemented the check_tile_in_hand method in the Player class.
@@ -78,7 +84,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -This method allows players to retrieve the current size of their hand, i.e., how many tiles they have in their hand at a given moment.
     -A test for this method was created.
     
-## [1.1.1] - 2023-09-06
+## [0.0.7] - 2023-09-06
 
 ### Added
   
@@ -89,25 +95,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -A test for this method was created.
     -There are tests left to correct.
     
-## [1.1.1] - 2023-09-07
+## [0.0.8] - 2023-09-07
 
 ### Added
    
     -Implemented the place_tiles method in the Board class to allow the placement of tiles on the Scrabble board.
  
     
-## [1.1.1] - 2023-09-08
+## [0.0.9] - 2023-09-08
 
 ### Added
    
    -Created the TestPlaceTiles class for performing unit tests of the place_tiles function in the 
    Board class (Modifications must be   made.).
    
-## [1.1.1] - 2023-09-09
+## [0.0.10] - 2023-09-10
 
 ### Added
     
     -Implemented the initial_tiles function to define initial tiles and their quantities in the Spanish Scrabble game.
+    
+## [0.0.11] - 2023-09-11
+
+### Added
+
+    -Created the initial_tiles test to verify that the initial tile counts match expectations in the Spanish Scrabble game.
+    -Defined the expected_tiles_count dictionary containing the expected quantities of initial tiles 
+    for each letter and combination in the game.
+    -The test verifies if the initial_tiles function provides results that match the expected counts in expected_tiles_count.
+    -The parts marked with the symbol '#' are being corrected.
+
+
 
 
 
