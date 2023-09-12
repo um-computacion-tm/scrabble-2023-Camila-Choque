@@ -59,3 +59,14 @@ class BagTiles:
             'CH': 5, 'Q': 5, 'J': 8, 'LL': 8, 'X': 8, 'Z': 10,
             'RR': 8,  
         }
+
+
+        # Crear una lista para almacenar las fichas adicionales necesarias
+        total = []
+
+        # Crear un diccionario para contar cuántas fichas de cada letra tenemos en la bolsa actualmente
+        current_tiles_count = {letter: 0 for letter in initial_tiles.keys()}
+
+        # Contar las fichas actuales en la bolsa
+        for tile in self.tiles:
+            current_tiles_count[tile.letter] += 1
