@@ -125,6 +125,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -The test verifies if the initial_tiles function provides results that match the expected counts in expected_tiles_count.
     -The parts marked with the symbol '#' are being corrected.
 
+## [0.0.12] - 2023-09-12
+
+### Added
+    
+    -Implemented the code to perform tile counting within a letter bag.
+    -Created an empty list called 'total' to store the additional tiles needed.
+    -Established a dictionary named 'current_tiles_count' to keep track of how many tiles of each letter are currently present in the bag.
+
 
 
 
