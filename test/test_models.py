@@ -51,14 +51,11 @@ class TestBagTiles(unittest.TestCase):
             initial_tiles_count + len(put_tiles), 
         )
 
-    def initial_tiles(self):
-        expected_tiles_count = {
-            'A': 11, 'E': 11, 'O': 8, 'I': 5, 'S': 5, 'N': 4, 'L': 3,
-            'R': 4, 'U': 4, 'T': 3, 'D': 4, 'G': 1, 'C': 3, 'B': 1,
-            'M': 1, 'P': 3, 'H': 1, 'Ñ': 8, 'F': 4, 'Y': 4, 'V': 4,
-            'CH': 5, 'Q': 5, 'J': 8, 'LL': 8, 'X': 8, 'Z': 10,
-            'RR': 8,  
-        }
+    def test_initial_tiles(self):
+        bag = BagTiles()
+        self.assertEqual(len(bag.tiles), 28)
+        bag.initial_tiles()
+        self.assertEqual(len(bag.tiles), 100)
 
 
 
