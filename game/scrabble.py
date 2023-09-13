@@ -8,8 +8,8 @@ class ScrabbleGame:
         self.board = Board()
         self.bag_tiles = BagTiles()
         self.players = []
-        for _ in range(players_count):
-            self.players.append(Player(bag_tiles=self.bag_tiles))
+        for index in range(players_count):
+            self.players.append(Player(name=index, bag_tiles=self.bag_tiles))
         
         self.current_player = None
 

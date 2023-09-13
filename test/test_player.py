@@ -5,7 +5,8 @@ from game.models import BagTiles
 
 class TetsPlayer(unittest.TestCase):
     def tests_init(self):
-        player_1 = Player(name="Player1")
+        bag = BagTiles()
+        player_1 = Player("player1", bag)
         self.assertEqual(
             len(player_1.tiles), 0,)
         
