@@ -2,7 +2,7 @@
 
 
 class Player:
-    def __init__(self,name, bag_tiles=None):
+    def __init__(self,name, bag_tiles):
         self.name = name
         self.bag_tiles = bag_tiles
         self.tiles = []
