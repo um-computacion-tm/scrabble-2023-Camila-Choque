@@ -132,6 +132,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -Implemented the code to perform tile counting within a letter bag.
     -Created an empty list called 'total' to store the additional tiles needed.
     -Established a dictionary named 'current_tiles_count' to keep track of how many tiles of each letter are currently present in the bag.
+    
+## [0.0.13] - 2023-09-13 
+### Added  
+    
+    -Added the `validate_word_inside_board` function to validate if a word can be placed on the board.
+    -The function handles validation of the word's location and orientation.
+    -It checks if the orientation is "H" (horizontal) and if the word fits within the board in that direction.
+    -Returns `True` if the word fits within the board in the horizontal orientation.
+    -Added a provisional condition for vertical orientation that is still in development.
+    -A test for this method was created.
+    
+### Changes
+
+    -Modifications were made to the `__init__` function within the `board.py` file.
+    
 
 
 

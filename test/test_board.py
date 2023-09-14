@@ -2,6 +2,7 @@ import unittest
 from game.board import Board
 
 
+
 class TestBoard(unittest.TestCase):
     def test_init(self):
         board = Board()
@@ -13,6 +14,18 @@ class TestBoard(unittest.TestCase):
             len(board.grid[0]),
             15,
         )
+
+    def test_word_inside_board(self):
+        board = Board()
+        word = "Facultad"
+        location = (5, 4)
+        orientation = "H"
+
+        word_is_valid = board.validate_word_inside_board(word, location, orientation)
+
+        assert word_is_valid == True
+    
+    
 
 
 
