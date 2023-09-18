@@ -3,6 +3,7 @@ from game.cell import Cell
 from game.models import Tile
 
 
+
 class TestCell(unittest.TestCase):
     def test_init(self):
         cell = Cell(multiplier=2, multiplier_type='letter')
@@ -48,7 +49,6 @@ class TestCell(unittest.TestCase):
             cell.calculate_value(),
             3,
         )
-
 
 
 if __name__ == '__main__':

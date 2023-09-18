@@ -18,5 +18,3 @@ class Cell:
         else:
             return self.letter.value
         
-    
-       

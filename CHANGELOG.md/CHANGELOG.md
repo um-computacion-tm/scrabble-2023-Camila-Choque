@@ -134,6 +134,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -Established a dictionary named 'current_tiles_count' to keep track of how many tiles of each letter are currently present in the bag.
     
 ## [0.0.13] - 2023-09-13 
+
 ### Added  
     
     -Added the `validate_word_inside_board` function to validate if a word can be placed on the board.
@@ -146,6 +147,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changes
 
     -Modifications were made to the `__init__` function within the `board.py` file.
+    
+## [0.0.14] - 2023-09-18
+
+### Added  
+   
+     -Added the joker method to the class.
+     -The joker method allows changing the current letter of an object of the class if it is an asterisk ("*").
+     -Implemented a Joker exception that is raised if an attempt is made to change the letter when it is not an asterisk.
+     -If the Joker exception occurs, an error is raised that can be caught and handled in client code.
+     
     
 
 

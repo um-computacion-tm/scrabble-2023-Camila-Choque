@@ -1,6 +1,7 @@
 import unittest
 from game.models import (BagTiles,Tile)
 from unittest.mock import patch
+#from game.models import Joker
 
 
 class TestTiles(unittest.TestCase):
@@ -8,6 +9,30 @@ class TestTiles(unittest.TestCase):
         tile = Tile('A', 1)
         self.assertEqual(tile.letter, 'A')
         self.assertEqual(tile.value, 1)
+""""
+class TestJoker(unittest.TestCase):
+    def test_joker_with_wildcard(self):
+        # Crea una instancia de JokerClass con el carácter comodín '*'
+        joker_instance = Joker('*')
+
+        # Llama a la función joker con una nueva letra
+        joker_instance.Joker('A')
+
+        # Verifica que el carácter comodín se haya actualizado a 'A'
+        self.assertEqual(joker_instance.letter, 'A')
+
+    def test_joker_without_wildcard(self):
+        # Crea una instancia de JokerClass con una letra no comodín
+        joker_instance = Joker('B')
+
+        # Intenta llamar a la función joker con una nueva letra
+        # Esto debería generar una excepción NotAJoker
+        with self.assertRaises(Joker):
+            joker_instance.Joker('C')
+"""
+
+
+
 
 
 class TestBagTiles(unittest.TestCase):
