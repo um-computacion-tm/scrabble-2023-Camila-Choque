@@ -1,18 +1,24 @@
 import random
-class Joker(Exception):
+
+class JokerA(Exception):
     pass 
 
 class Tile:
     def __init__(self, letter, value):
         self.letter = letter
         self.value = value
-    #Cambia la letra de un objeto de la clase 
+
     
+class joker():  
+    def __init__(self):
+        self.letter = "*"
+        
+     #Cambia la letra de un objeto de la clase 
     def joker(self, new_letter):
         if self.letter == "*":
             self.letter = new_letter
         else:
-            raise Joker(Exception)
+            raise JokerA(Exception)
 
 
 class BagTiles:
