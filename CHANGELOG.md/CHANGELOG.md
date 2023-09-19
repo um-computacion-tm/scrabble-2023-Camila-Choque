@@ -157,11 +157,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
      -Implemented a Joker exception that is raised if an attempt is made to change the letter when it is not an asterisk.
      -If the Joker exception occurs, an error is raised that can be caught and handled in client code.
      
-    
+## [0.0.15] - 2023-09-19
 
-
-
-
+### Added  
+       
+     -An "init" function was created for the "joker" class
+     -Created a test class named TestJoker using the unittest module to test the functionality of the joker class.
+     -Created a test case named test_joker_with_wildcard that verifies if the joker method of the joker class works correctly 
+     when using a wildcard character ('*') to change the letter.
+     -Created a test case named test_joker_without_wildcard that verifies if the joker method of the joker 
+     class raises a JokerA exception when attempting to change the letter without using a wildcard character.
 
    
     
