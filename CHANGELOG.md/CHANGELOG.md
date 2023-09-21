@@ -167,6 +167,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
      when using a wildcard character ('*') to change the letter.
      -Created a test case named test_joker_without_wildcard that verifies if the joker method of the joker 
      class raises a JokerA exception when attempting to change the letter without using a wildcard character.
+     
+
+## [0.0.16] - 2023-09-20
+
+
+### Added  
+     
+     -Created the calculate_total_value(cells) function to calculate the total value of a list of cells.
+     -The function iterates through all cells, checks if they have a letter, and adds the value of the letter 
+     (considering the multiplier if applicable) to the total value.
+
 
    
     

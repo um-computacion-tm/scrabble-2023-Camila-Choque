@@ -17,4 +17,10 @@ class Cell:
             return self.letter.value * self.multiplier
         else:
             return self.letter.value
-        
+
+    def calculate_total_value(cells):
+        total_value = 0
+        for cell in cells:
+            if cell.letter is not None:
+                total_value += cell.calculate_value()
+        return total_value
