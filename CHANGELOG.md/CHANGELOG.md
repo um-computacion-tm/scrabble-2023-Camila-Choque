@@ -195,9 +195,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
      -The 'calculate_total_value' function was removed because there was a similar function
    
     
+## [0.0.18] - 2023-09-26 
+
+
+### Added    
     
-    
-    
+      -A 'calculate_word_value' function was created, but it is unfinished.
     
     
     
