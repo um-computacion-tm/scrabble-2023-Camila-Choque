@@ -178,7 +178,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
      -The function iterates through all cells, checks if they have a letter, and adds the value of the letter 
      (considering the multiplier if applicable) to the total value.
 
+## [0.0.17] - 2023-09-25
 
+
+### Added  
+
+      - Added the `remove_letter` method to the `Cell` class to enable the removal of a letter tile from the cell.
+      - The `remove_letter` method stores the letter tile to be removed in a `letter` variable.
+      - After removal, the `letter` property of the cell is set to `None`.
+      - The `remove_letter` method returns the removed letter for further processing.
+      -A test for this method was created.
+      
+
+### Removed
+     
+     -The 'calculate_total_value' function was removed because there was a similar function
    
     
     
