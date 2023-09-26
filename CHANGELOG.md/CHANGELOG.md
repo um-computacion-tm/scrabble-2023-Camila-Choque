@@ -132,11 +132,67 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     -Implemented the code to perform tile counting within a letter bag.
     -Created an empty list called 'total' to store the additional tiles needed.
     -Established a dictionary named 'current_tiles_count' to keep track of how many tiles of each letter are currently present in the bag.
+    
+## [0.0.13] - 2023-09-13 
+
+### Added  
+    
+    -Added the `validate_word_inside_board` function to validate if a word can be placed on the board.
+    -The function handles validation of the word's location and orientation.
+    -It checks if the orientation is "H" (horizontal) and if the word fits within the board in that direction.
+    -Returns `True` if the word fits within the board in the horizontal orientation.
+    -Added a provisional condition for vertical orientation that is still in development.
+    -A test for this method was created.
+    
+### Changes
+
+    -Modifications were made to the `__init__` function within the `board.py` file.
+    
+## [0.0.14] - 2023-09-18
+
+### Added  
+   
+     -Added the joker method to the class.
+     -The joker method allows changing the current letter of an object of the class if it is an asterisk ("*").
+     -Implemented a Joker exception that is raised if an attempt is made to change the letter when it is not an asterisk.
+     -If the Joker exception occurs, an error is raised that can be caught and handled in client code.
+     
+## [0.0.15] - 2023-09-19
+
+### Added  
+       
+     -An "init" function was created for the "joker" class
+     -Created a test class named TestJoker using the unittest module to test the functionality of the joker class.
+     -Created a test case named test_joker_with_wildcard that verifies if the joker method of the joker class works correctly 
+     when using a wildcard character ('*') to change the letter.
+     -Created a test case named test_joker_without_wildcard that verifies if the joker method of the joker 
+     class raises a JokerA exception when attempting to change the letter without using a wildcard character.
+     
+
+## [0.0.16] - 2023-09-20
 
 
+### Added  
+     
+     -Created the calculate_total_value(cells) function to calculate the total value of a list of cells.
+     -The function iterates through all cells, checks if they have a letter, and adds the value of the letter 
+     (considering the multiplier if applicable) to the total value.
+
+## [0.0.17] - 2023-09-25
 
 
+### Added  
 
+      - Added the `remove_letter` method to the `Cell` class to enable the removal of a letter tile from the cell.
+      - The `remove_letter` method stores the letter tile to be removed in a `letter` variable.
+      - After removal, the `letter` property of the cell is set to `None`.
+      - The `remove_letter` method returns the removed letter for further processing.
+      -A test for this method was created.
+      
+
+### Removed
+     
+     -The 'calculate_total_value' function was removed because there was a similar function
    
     
     

@@ -18,5 +18,10 @@ class Cell:
         else:
             return self.letter.value
         
-    
-       
+    def remove_letter(self):
+        letter = self.letter  # Guarda la letra que se va a eliminar
+        self.letter = None  # Establece la propiedad letter en None después de la eliminación
+        return letter  # Devuelve la letra eliminada
+
+        
+

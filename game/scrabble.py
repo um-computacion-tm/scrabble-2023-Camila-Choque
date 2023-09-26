@@ -20,8 +20,13 @@ class ScrabbleGame:
         else:
             #index = index del current player + 1
             #len(self.players)
-            index = self.players.index(self.current_player) + 1
-            self.current_player = self.players[index]
-
+            index = self.players.index(self.current_player) 
+            if index == len(self.players) - 1:
+               self.current_player = self.players[0]
+            else:
+                self.current_player = self.players[index + 1]
+            
+    
+    
         
             

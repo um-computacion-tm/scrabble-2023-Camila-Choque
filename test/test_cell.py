@@ -3,6 +3,8 @@ from game.cell import Cell
 from game.models import Tile
 
 
+
+
 class TestCell(unittest.TestCase):
     def test_init(self):
         cell = Cell(multiplier=2, multiplier_type='letter')
@@ -48,8 +50,15 @@ class TestCell(unittest.TestCase):
             cell.calculate_value(),
             3,
         )
+    def test_remove_letter(self):
+        # Crea una celda y agrega una letra
+        cell = Cell(None, None)
+        letter = Tile(letter='p', value=3)
+        cell.add_letter(letter)
+        removed_letter = cell.remove_letter()  # Llama a remove_letter para eliminar la letra y obtenerla
+        self.assertEqual(removed_letter, letter)  # Verifica que la letra eliminada sea la misma que la que agregaste
+        self.assertIsNone(cell.letter)  # Verifica que cell.letter ahora sea None
 
-
-
+    
 if __name__ == '__main__':
     unittest.main()

@@ -1,9 +1,24 @@
 import random
 
+class JokerA(Exception):
+    pass 
+
 class Tile:
     def __init__(self, letter, value):
         self.letter = letter
         self.value = value
+
+    
+class joker():  
+    def __init__(self):
+        self.letter = "*"
+        
+     #Cambia la letra de un objeto de la clase 
+    def joker(self, new_letter):
+        if self.letter == "*":
+            self.letter = new_letter
+        else:
+            raise JokerA(Exception)
 
 
 class BagTiles:
@@ -53,7 +68,8 @@ class BagTiles:
     def initial_tiles(self):
         # Diccionario con las fichas iniciales y sus cantidades
         initial_tiles = {
-            'A': 6, 'E': 9, 'O': 6, 'I': 3, 'S': 3, 'N': 2, 'L': 1,
+            'A': 6
+            , 'E': 9, 'O': 6, 'I': 3, 'S': 3, 'N': 2, 'L': 1,
             'R': 2, 'U': 2, 'T': 1, 'D': 2, 'G': 1, 'C': 2, 'B': 1,
             'M': 1, 'P': 3, 'H': 1, 'Ñ': 2, 'F': 4, 'Y': 2, 'V': 2,
             'CH': 2, 'Q': 2, 'J': 4, 'LL': 1, 'X': 1, 'Z': 2,
