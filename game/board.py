@@ -19,6 +19,7 @@ class Board:
             pass
 
         ######ARREGLAR
+        
 
     def place_tiles(self, tiles, coordinates):
        

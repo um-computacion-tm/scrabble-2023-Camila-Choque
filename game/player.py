@@ -25,6 +25,7 @@ class Player:
     def check_tile_in_hand(self, tile):
        return tile in self.tiles
    
+   
     def get_hand_size(self):
         return len(self.tiles)
 
