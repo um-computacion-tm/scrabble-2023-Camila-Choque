@@ -201,6 +201,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added    
     
       -A 'calculate_word_value' function was created, but it is unfinished.
+      
+
+## [0.0.19] - 2023-09-29
+
+
+### Added    
+      
+      -Initial implementation of the `Dictionary` module.
+      -remove_accents` and `verify_word` methods for word processing and verification against the word list.
+      -Improved error handling in the `verify_word` method.
+      -Performance optimization in word lookup.
+
     
     
     
