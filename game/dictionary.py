@@ -1,6 +1,6 @@
 import unicodedata
 
-with open('all_words.txt', 'r', encoding='utf-8') as file:
+with open('dictionary_words.txt', 'r', encoding='utf-8') as file:
     word_list = set(word.strip().lower() for word in file)
     
 

@@ -212,6 +212,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
       -remove_accents` and `verify_word` methods for word processing and verification against the word list.
       -Improved error handling in the `verify_word` method.
       -Performance optimization in word lookup.
+      
+      
+## [0.0.20] - 2023-10-04
+
+
+### Added    
+       
+      -Imported the unittest module to perform unit testing.
+      -Imported the Dictionary class from the game.dictionary module to conduct tests on the dictionary.
+      -Implemented four test methods in the TestDictionary class:
+
+         1-test_simple_verify(): Checks if a simple word ("Casa") is present in the dictionary. Expected to pass.
+         2-test_verify_false_word(): Verifies if a word not in the dictionary ("Kadabra") is correctly detected. Expected to pass.
+         3-test_verify_word_with_accents(): Checks if a word with accents ("Cafè") is present in the dictionary. Expected to pass.
+         4-test_verify_word_with_dieresis(): Checks if a word with dieresis ("Cigüeña") is present in the dictionary. Expected to pass.
+
+
 
     
     
