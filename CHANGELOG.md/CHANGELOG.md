@@ -228,6 +228,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
          3-test_verify_word_with_accents(): Checks if a word with accents ("Cafè") is present in the dictionary. Expected to pass.
          4-test_verify_word_with_dieresis(): Checks if a word with dieresis ("Cigüeña") is present in the dictionary. Expected to pass.
 
+## [0.0.21] - 2023-10-05
+
+
+### Added    
+
+      -The folder "dictionary_words.txt" was created.
+      -All the words corresponding to the dictionary were added.
 
 
     

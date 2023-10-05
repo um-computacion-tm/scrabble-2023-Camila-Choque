@@ -12,7 +12,7 @@ class TestDictionary(unittest.TestCase):
         self.assertEqual(dic.verify_word(word), False)
     def test_verify_word_with_accents(self):
         dic = Dictionary()
-        word = "Cafè"
+        word = "Café"
         self.assertEqual(dic.verify_word(word), True)
     def test_verify_word_with_dieresis(self):
         dic = Dictionary()
