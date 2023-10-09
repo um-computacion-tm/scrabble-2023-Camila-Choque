@@ -2,6 +2,7 @@
 source =
     game
     test
+    main
 omit =
     env/*
     */test*

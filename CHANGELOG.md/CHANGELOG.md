@@ -237,6 +237,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
       -All the words corresponding to the dictionary were added.
 
 
+## [0.0.22] - 2023-10-09
+
+
+### Added  
+       
+       -A folder named main.py was created, containing the game's initial code.
+       -An initialization method was implemented to welcome the players.
+       -The player_count method was added, allowing users to input the number of players (maximum 4) and validating the user's input.
+
+
     
     
     
