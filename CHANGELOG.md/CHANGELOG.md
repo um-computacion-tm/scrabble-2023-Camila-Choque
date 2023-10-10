@@ -247,6 +247,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
        -The player_count method was added, allowing users to input the number of players (maximum 4) and validating the user's input.
 
 
+## [0.0.23] - 2023-10-10
+
+
+### Added  
+      
+      -Implemented the unit test test_place_tiles in the TestBoard class to evaluate the place_tiles function.
+      -The test verifies the ability of the place_tiles function to place tiles at specified coordinates on the board.
+      -Assertions are made to confirm that the function returns True when a tile is placed successfully and False when the 
+       position is already occupied.
     
     
     

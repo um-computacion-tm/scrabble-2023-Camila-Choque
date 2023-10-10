@@ -1,5 +1,6 @@
 import unittest
 from game.board import Board
+from game.models import Tile
 
 
 
@@ -25,7 +26,11 @@ class TestBoard(unittest.TestCase):
 
         assert word_is_valid == True
     
-    
+    def test_place_tiles(self):
+        board= Board()
+        tile = Tile("A",1)
+        self.assertTrue(board.place_tiles(7,7,tile))
+        self.assertFalse(board.place_tiles(7,7,tile)) 
 
 
 

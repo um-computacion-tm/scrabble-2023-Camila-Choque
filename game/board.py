@@ -17,11 +17,9 @@ class Board:
                 return True
         else:
             pass
-
-        ######ARREGLAR
         
-
-    def place_tiles(self, tiles, coordinates):
+"""""
+    def place_tiles(self, tiles, coordinates_x,coordinates_y):
        
         if len(tiles) != len(coordinates):
             print("La cantidad de fichas y coordenadas no coincide.")
@@ -37,3 +35,4 @@ class Board:
                 return False
 
         return True
+"""""
