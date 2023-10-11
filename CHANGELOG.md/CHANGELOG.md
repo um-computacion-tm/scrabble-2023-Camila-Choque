@@ -258,7 +258,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
        position is already occupied.
     
     
-    
+## [0.0.24] - 2023-10-11 
+
+
+### Changed
+      
+     -Method modification: The place_tiles method was modified to enable tile placement on the board.
+     -Added validations: The method checks whether the location_x and location_y coordinates are within the board boundaries 
+      (between 0 and 14) before proceeding with the placement.
+     -Cell validation implemented: It verifies if the cell at the specified location already contains a letter (cell.letter is None) 
+      before adding a new letter to the board.
+     -Boolean return value: If all conditions are met, the tile letter is added to the cell, and True is returned to 
+      indicate successful placement. If any of the conditions are not met, False is returned to indicate unsuccessful placement. 
+  
     
     
     

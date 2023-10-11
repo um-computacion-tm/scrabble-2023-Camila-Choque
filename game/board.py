@@ -18,21 +18,12 @@ class Board:
         else:
             pass
         
-"""""
-    def place_tiles(self, tiles, coordinates_x,coordinates_y):
-       
-        if len(tiles) != len(coordinates):
-            print("La cantidad de fichas y coordenadas no coincide.")
-            return False
 
-        for tile, (row, col) in zip(tiles, coordinates):
-             #Verificar si la casilla está vacía
-            if self.is_empty(row, col):
-                # Colocar la ficha en la casilla
-                self.grid[row][col].set_tile(tile)
-            else:
-                print(f"La casilla en ({row}, {col}) ya está ocupada.")
-                return False
+    def place_tiles(self, location_x, location_y, tile):
+        if 0 <= location_x < 15 and 0 <= location_y < 15:
+            cell = self.grid[location_x][location_y]
+            if cell.letter is None:
+                cell.add_letter(tile)
+                return True
+        return False
 
-        return True
-"""""
