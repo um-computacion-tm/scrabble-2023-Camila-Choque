@@ -2,7 +2,7 @@ from game.models import Tile
 
 
 class Cell:
-    def __init__(self, multiplier, multiplier_type):
+    def __init__(self, multiplier , multiplier_type ):
         self.multiplier = multiplier
         self.multiplier_type = multiplier_type
         self.letter = None
@@ -22,6 +22,14 @@ class Cell:
         letter = self.letter  # Guarda la letra que se va a eliminar
         self.letter = None  # Establece la propiedad letter en None después de la eliminación
         return letter  # Devuelve la letra eliminada
+    
+    def __repr__(self):
+        if self.letter:
+            return repr(self.letter)
+        if self.multiplier > 1:
+            return f'{"W" if self.multiplier_type == "word" else "L"}x{self.multiplier}'
+        else:
+            return
 """""
     def calculate_word_value(word):
         word = word.lower()  

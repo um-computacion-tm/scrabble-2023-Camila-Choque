@@ -271,8 +271,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
      -Boolean return value: If all conditions are met, the tile letter is added to the cell, and True is returned to 
       indicate successful placement. If any of the conditions are not met, False is returned to indicate unsuccessful placement. 
   
+## [0.0.25] - 2023-10-18
     
-    
+### Added  
+      
+      -Added multiplier function to represent multipliers on the Scrabble game board.
+      -Implemented a two-dimensional array to represent the distribution of multipliers on the game board.
+      -Introduced the following types of multipliers:
+         "3W": Triple word multiplier.
+         "2W": Double word multiplier.
+         "3L": Triple letter multiplier.
+         "2L": Double letter multiplier.   
+         
+      
+      -Introduced active_multipliers function to convert multiplier types into usable Cell objects in the game.
+      -Now accepts a multiplier argument representing the multipliers on the game board.
+      -Handles two types of multipliers: "W" for word and "L" for letter.
+      -If the multiplier is None, it returns a null Cell object.
+      
+      -Implemented the __repr__ method in the Cell class to represent the state of the Cell object as a string.
     
     
     

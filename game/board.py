@@ -26,4 +26,40 @@ class Board:
                 cell.add_letter(tile)
                 return True
         return False
-
+    
+    def multiplier():
+       
+       multiplier = [
+            ["3W", None, None, "2L", None, None, None, "3W", None, None, None, "2L", None, None, "3W"],
+            [None, "2W", None, None, None, "3L", None, None, None, "3L", None, None, None, "2W", None],  
+            [None, None, "2W", None, None, None, "2L", None, "2L", None, None, None, "2W", None, None], 
+            ["2L", None, None, "2W", None, None, None, "2L", None, None, None, "2W", None, None, "2L"],  
+            [None, None, None, None, "2W", None, None, None, None, None, "2W", None, None, None, None],  
+            [None, "3L", None, None, None, "3L", None, None, None, "3L", None, None, None, "3L", None],  
+            [None, None, "2L", None, None, None, "2L", None, "2L", None, None, None, "2L", None, None],  
+            ["3W", None, None, "2L", None, None, None, "2W", None, None, None, "2L", None, None, "3W"],  
+            [None, None, "2L", None, None, None, "2L", None, "2L", None, None, None, "2L", None, None],  
+            [None, "3L", None, None, None, "3L", None, None, None, "3L", None, None, None, "3L", None],  
+            [None, None, None, None, "2W", None, None, None, None, None, "2W", None, None, None, None],  
+            ["2L", None, None, "2W", None, None, None, "2L", None, None, None, "2W", None, None, "2L"],  
+            [None, None, "2W", None, None, None, "2L", None, "2L", None, None, None, "2W", None, None],  
+            [None, "2W", None, None, None, "3L", None, None, None, "3L", None, None, None, "2W", None],  
+            ["3W", None, None, "2L", None, None, None, "3W", None, None, None, "2L", None, None, "3W"] 
+        ]
+       
+    #"3w" representa los multiplicadores de palabra triples.
+    #"2w" representa los multiplicadores de palabra dobles.
+    #"3l" representa los multiplicadores de letra triples.
+    #"2l" representa los multiplicadores de letra dobles.
+     
+    
+class ActiveMultipliers:
+    def active_multipliers(self, multiplier):
+        if multiplier is None:
+            return Cell()
+        multiplier_type = multiplier[-1]
+        multiplier_value = int(multiplier[0])
+        if multiplier_type == "W":
+            return Cell(multiplier=multiplier_value, multiplier_type="word")
+        elif multiplier_type == "L":
+            return Cell(multiplier=multiplier_value, multiplier_type="letter")
