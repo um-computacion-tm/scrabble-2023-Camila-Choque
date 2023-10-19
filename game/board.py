@@ -53,7 +53,7 @@ class Board:
     #"2l" representa los multiplicadores de letra dobles.
      
     
-class ActiveMultipliers:
+
     def active_multipliers(self, multiplier):
         if multiplier is None:
             return Cell()
