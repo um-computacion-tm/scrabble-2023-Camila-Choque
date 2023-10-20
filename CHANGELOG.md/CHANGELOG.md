@@ -291,8 +291,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
       
       -Implemented the __repr__ method in the Cell class to represent the state of the Cell object as a string.
     
+## [0.0.26] - 2023-10-19
     
-    
+### Added 
+      
+      -Implemented the validate_word function.
+      -Added support for validating words in both horizontal and vertical orientations on a 15x15 grid.
+      -The function takes input parameters: starting coordinates (start_location_x, start_location_y), the word to validate 
+       (word),and the orientation (orientation).
+      -If the word can be placed on the grid without issues, the function returns True; otherwise, it returns False.
+      -Implemented the test_validate_word function to perform word validation tests on the game board.
+      -Implemented the test_place_word_horizontal function to conduct tests for placing words horizontally on the game board.
+      -Created a game board instance.
+      -Defined the word to be placed as "Calcular."
+      -Specified the starting position as (7, 4) and the orientation as horizontal.
+      -Checked the validity of the word and its placement on the board using the validate_word_inside_board function.
     
     
     

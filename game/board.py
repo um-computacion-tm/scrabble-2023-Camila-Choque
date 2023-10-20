@@ -63,3 +63,17 @@ class Board:
             return Cell(multiplier=multiplier_value, multiplier_type="word")
         elif multiplier_type == "L":
             return Cell(multiplier=multiplier_value, multiplier_type="letter")
+
+
+    def validate_word(self, start_location_x, start_location_y, word, orientation):
+        for i, letter in enumerate(word):
+            if orientation == 'Horizontal':
+                location_x = start_location_x
+                location_y = start_location_y + i
+            elif orientation == 'Vertical':
+                location_x = start_location_x + i
+                location_y = start_location_y
+
+            if location_x >= 15 or location_y >= 15 or (self.grid[location_x][location_y].letter is None or self.grid[location_x][location_y].letter.letter != letter):
+                return False
+        return True
