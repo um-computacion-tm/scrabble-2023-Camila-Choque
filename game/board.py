@@ -77,3 +77,26 @@ class Board:
             if location_x >= 15 or location_y >= 15 or (self.grid[location_x][location_y].letter is None or self.grid[location_x][location_y].letter.letter != letter):
                 return False
         return True
+    
+    def validate_word_horizontal(self, word, location, orientation):
+        location_x, location_y = location
+        word_length = len(word)
+        found_letter = False
+
+        for i in range(word_length):
+            actual_tile = self.grid[location_x][location_y + i].letter
+            if actual_tile is not None and actual_tile.letter.lower() == word[i]:
+                found_letter = True
+
+        return found_letter and self.validate_word_inside_board(word, location, orientation)
+
+    def validate_word_vertical(self, word, location, orientation):
+        location_x, location_y = location
+        word_length = len(word)
+        found_letter = False
+        for i in range(word_length):
+            actual_tile = self.grid[location_x + i][location_y].letter
+            if actual_tile is not None:
+                if actual_tile.letter.lower() == word[i]:
+                    found_letter = True
+        return found_letter and self.validate_word_inside_board(word, location, orientation)

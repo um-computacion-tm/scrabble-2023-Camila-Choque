@@ -49,14 +49,24 @@ class TestBoard(unittest.TestCase):
         self.assertFalse(board.validate_word(7, 7, 'AB', 'Vertical'))
 
 
-    def test_place_word_horizontal(self):
+    def test_word_out_of_board(self):
         board = Board()
-        word = "Calcular"
-        location = (7, 4)
-        orientation = "H"
-        word_is_valid = board.validate_word_inside_board(word, location, orientation)
-        assert word_is_valid == True
+        word = "Facultad"
+        location = (14, 4)
+        orientation = "Horizontal"
 
+        word_is_valid = board.validate_word_out_of_board(word, location, orientation)
+
+        assert word_is_valid == False
+    def test_word_inside_board_vertical(self):
+        board = Board()
+        word = "Facultad"
+        location = (4, 5)  # Ubicación dentro del tablero
+        orientation = "Vertical"
+
+        word_is_valid = board.validate_word_inside_board(word, location, orientation)
+
+        assert word_is_valid == True
 
 
 if __name__ == '__main__':

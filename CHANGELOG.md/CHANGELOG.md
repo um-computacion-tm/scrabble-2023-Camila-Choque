@@ -306,7 +306,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
       -Defined the word to be placed as "Calcular."
       -Specified the starting position as (7, 4) and the orientation as horizontal.
       -Checked the validity of the word and its placement on the board using the validate_word_inside_board function.
-    
+      
+## [0.0.27] - 2023-10-20
+
+
+### Added 
+      
+      -Implemented the validate_word_horizontal method in the existing class.
+      -The method checks if a word can be placed horizontally at a specific location on the board.
+      -The validate_word_inside_board method is invoked to ensure the word can be placed at the specified location horizontally on 
+       the board.
+      -The method returns True if a valid letter is found and the word can be placed at the specified location horizontally;
+       otherwise, it returns False.
+      -Implemented the validate_word_vertical method in the existing class.
+      -The method checks if a word can be placed vertically at a specific location on the board.
+      -Added the test_word_inside_board_vertical test case to validate word placement inside the board vertically.
+      -Created a new instance of the Board class for testing purposes.
     
     
     
