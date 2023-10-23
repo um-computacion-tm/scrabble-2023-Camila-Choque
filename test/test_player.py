@@ -1,6 +1,7 @@
 import unittest
 from game.player import Player
 from game.models import BagTiles 
+from game.models import Tile
 
 
 class TetsPlayer(unittest.TestCase):
@@ -50,7 +51,18 @@ class TetsPlayer(unittest.TestCase):
         player.tiles = ["A", "B", "C", "D", "E"]
         hand_size = player.get_hand_size()
         self.assertEqual(hand_size, 5)
+    
+    def test_view_points(self):
+        player = Player(name = "Player 1", bag_tiles= "")
+        player.points = 15
+        points = player.view_points()
+        self.assertEqual(points, player.points)
 
+    def test_view_tiles(self):
+        player = Player(name='Player 1', bag_tiles="")
+        player.tiles = [Tile('A', 1), Tile('B', 2), Tile('C', 3)]
+        tiles = player.view_tiles()
+        self.assertEqual(tiles, player.tiles)
 
 
         

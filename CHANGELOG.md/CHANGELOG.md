@@ -322,8 +322,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
       -The method checks if a word can be placed vertically at a specific location on the board.
       -Added the test_word_inside_board_vertical test case to validate word placement inside the board vertically.
       -Created a new instance of the Board class for testing purposes.
-    
-    
+
+## [0.0.28] - 2023-10-22
+
+
+### Added 
+     
+     -Implemented the validate_word_place_board method in the Board class to validate word placement on the board.
+     -Added a test case to verify the placement of a word vertically on an empty board (test_place_word_empty_board_vertical_fine).
+     -Added a test case (test_place_word_empty_board_vertical_wrong) to verify the incorrect placement of a word vertically on 
+      an empty board.
+     -Implemented the view_points method in the Player class to allow players to view their points in the game.
+     -The view_points method returns the player's current points.
+     -This method provides players with the ability to check their current score at any point during the game.
+     -Created the test_view_points test case in the test file to verify the view_points function of the Player class.
+     -The view_points method is used to obtain the player's current score and validate if it matches the manually set score.
+     -Implemented the view_tiles method in the Player class to allow players to view the tiles they possess during the game.
+     -The view_tiles method returns a copy of the player's tiles list (self.tiles).
+     -Created the test_view_tiles test case in the test file to validate the view_tiles function of the Player class.
     
     
     

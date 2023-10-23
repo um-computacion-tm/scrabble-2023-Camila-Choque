@@ -6,6 +6,7 @@ class Player:
         self.name = name
         self.bag_tiles = bag_tiles
         self.tiles = []
+        self.points = 0
         
 
     def draw_tiles(self, bag, num_tiles):
@@ -29,8 +30,11 @@ class Player:
     def get_hand_size(self):
         return len(self.tiles)
 
+    def view_points(self):
+        return self.points
     
-
+    def view_tiles(self):
+        return self.tiles[:]
 
 
 
