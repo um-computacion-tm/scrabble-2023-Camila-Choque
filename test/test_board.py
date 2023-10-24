@@ -66,6 +66,7 @@ class TestBoard(unittest.TestCase):
         word_is_valid = board.validate_word_inside_board(word, location, orientation)
 
         self.assertTrue(word_is_valid)
+ 
     
     """""
     def test_place_word_empty_board_vertical_fine(self):

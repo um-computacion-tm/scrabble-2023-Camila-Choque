@@ -341,8 +341,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
      -The view_tiles method returns a copy of the player's tiles list (self.tiles).
      -Created the test_view_tiles test case in the test file to validate the view_tiles function of the Player class.
     
-    
-    
+## [0.0.29] - 2023-10-23   
+
+
+### Added 
+      
+      -Implemented the take_turn_player(self) function allowing a player to take their turn in the game.
+      -The function displays the player's current hand using self.show_rack().
+      -The test_main.py folder was created."
+      -Implemented the unit test test_valid_player_count(self, mock_input) to test the valid_player_count() function in the Main() class
+      -Implemented the unit test test_take_turn_player_play(self, mock_input, mock_print, mock_object) to evaluate the take_turn() 
+      function in the Main() class.
+      -Advanced the game to the next turn using main.game.next_turn().
+      -Called the main.take_turn() function to simulate the player's turn in the game.
     
     
     
