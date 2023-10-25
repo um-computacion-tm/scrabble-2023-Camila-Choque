@@ -23,3 +23,16 @@ class Main:
                 break
             elif action == 3:
                 self.show_scores()
+
+  def exchange_tiles(self):
+        while True:
+            amount = input("¿Cuántas fichas quieres intercambiar? (1-7) (0 para salir): ")
+            amount = self.game.input_to_int(amount)
+            numbers = [1, 2, 3, 4, 5, 6, 7]
+            if amount in numbers:
+                self.convert_tiles_in_another_tile(amount, numbers)
+                return 'finish'
+            elif amount == 0:
+                break
+            else: 
+                print('Valor invalido, intente de nuevo')

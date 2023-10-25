@@ -354,6 +354,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
       function in the Main() class.
       -Advanced the game to the next turn using main.game.next_turn().
       -Called the main.take_turn() function to simulate the player's turn in the game.
+      
+## [0.0.30] - 2023-10-24
+
+
+### Added 
+      
+      -Implemented the exchange_tiles() function, allowing players to exchange tiles in the game.
+      -Prompt the user to input the number of tiles they want to exchange within the range of 1 to 7.
+      -Validate user input to ensure it is a number between 1 and 7, inclusive.
+      -Implemented the test_exchange_tiles(self, mock_input) function in the test suite.
+      -Implemented the test_change_joker_to_tile_true(self, mock_input) function in the test suite.
+      -Advanced to the next turn in the game by calling main.game.next_turn().
+
     
     
     
