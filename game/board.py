@@ -100,3 +100,31 @@ class Board:
                 if actual_tile.letter.lower() == word[i]:
                     found_letter = True
         return found_letter and self.validate_word_inside_board(word, location, orientation)
+    
+    def is_empty(self):
+        if self.grid[7][7].letter is None:
+            return True
+        else:
+            return False
+
+    def word_in_the_center(self, word, location, orientation):
+        location_x, location_y = location
+        is_horizontal = orientation == "Horizontal"
+        is_vertical = orientation == "Vertical"
+
+        if is_horizontal and location_x == 7:
+            return self.validate_word_inside_board(word, location, orientation)
+
+        if is_vertical and location_y == 7:
+            return self.validate_word_inside_board(word, location, orientation)
+
+        return False
+
+    def validate_word_place_board(self, word, location, orientation):
+        if self.is_empty() is True:
+            return self.word_in_the_center(word, location, orientation)
+        else:
+            if orientation == "Horizontal":
+                return self.validate_word_horizontal(word, location, orientation)
+            else:
+                return self.validate_word_vertical(word, location, orientation)

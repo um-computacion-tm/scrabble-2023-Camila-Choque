@@ -366,6 +366,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
       -Implemented the test_exchange_tiles(self, mock_input) function in the test suite.
       -Implemented the test_change_joker_to_tile_true(self, mock_input) function in the test suite.
       -Advanced to the next turn in the game by calling main.game.next_turn().
+      
+## [0.0.31] - 2023-10-30
+
+
+### Added 
+
+      -Created the is_empty function, which checks whether the element at a certain position in the grid is empty or not.
+      -Implemented the word_in_the_center function, which checks if the word can be placed in the center of the board at a given 
+       position and orientation.
+      -Added validation for the word inside the board using the validate_word_inside_board function.
+      -Documented the parameters and purpose of the word_in_the_center function to enhance code understanding.
+      -Created the validate_word_place_board function to validate the placement of a word on the board.
+      -Implemented logic to check if the board is empty, and if so, utilized the word_in_the_center function to validate the placement
+       of the word in the center.
 
     
     
