@@ -30,19 +30,7 @@ class Cell:
             return f'{"W" if self.multiplier_type == "word" else "L"}x{self.multiplier}'
         else:
             return
-"""""
-    def calculate_word_value(word):
-        word = word.lower()  
-
-        total_value = 0
-        word_multiplier = 1
-
-        for letter in word:
-            if letter in letter_values:
-                letter_value = letter_values[letter]
-                total_value += letter_value
-
-        return total_value * word_multiplier
-"""
         
+    def deactive_cell(self):
+        self.status = 'desactive'
 

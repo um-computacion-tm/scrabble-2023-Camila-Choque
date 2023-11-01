@@ -1,4 +1,5 @@
 from game.cell import Cell
+
 class Board:
     def __init__(self):
         self.grid = [[Cell(1, "") for _ in range(15)] for _ in range(15)]
@@ -128,3 +129,19 @@ class Board:
                 return self.validate_word_horizontal(word, location, orientation)
             else:
                 return self.validate_word_vertical(word, location, orientation)
+
+"""""
+    def put_words_board(self, word, location, orientation):
+        transform = Transform()
+        instrument = Instrument()
+        list_word = transform.word_to_tiles(word)
+        row = location[0]
+        column = location[1]
+        i = 0
+        for _ in list_word:
+            self.grid[row][column].letter = list_word[i]
+            self.grid[row][column].deactive_cell()
+            row, column = instrument.move_pointer(orientation, row, column)
+            i += 1
+
+"""""

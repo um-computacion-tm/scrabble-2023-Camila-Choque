@@ -66,6 +66,36 @@ class TestBoard(unittest.TestCase):
         word_is_valid = board.validate_word_inside_board(word, location, orientation)
 
         self.assertTrue(word_is_valid)
+
+    def test_put_words_vertical(self):
+        board = Board()
+        word = "Facultad"
+        location = (5, 4)
+        orientation = "V"
+        board.put_words_board(word, location, orientation)
+        self.assertEqual(board.grid[5][4].letter.letter, "F")
+        self.assertEqual(board.grid[6][4].letter.letter, "A")
+        self.assertEqual(board.grid[7][4].letter.letter, "C")
+        self.assertEqual(board.grid[8][4].letter.letter, "U")
+        self.assertEqual(board.grid[9][4].letter.letter, "L")
+        self.assertEqual(board.grid[10][4].letter.letter, "T")
+        self.assertEqual(board.grid[11][4].letter.letter, "A")
+        self.assertEqual(board.grid[12][4].letter.letter, "D")    
+    
+    def test_put_words_horizontal(self):
+        board = Board()
+        word = "Facultad"
+        location = (5, 4)
+        orientation = "H"
+        board.put_words_board(word, location, orientation)
+        self.assertEqual(board.grid[5][4].letter.letter, "F")
+        self.assertEqual(board.grid[5][5].letter.letter, "A")
+        self.assertEqual(board.grid[5][6].letter.letter, "C")
+        self.assertEqual(board.grid[5][7].letter.letter, "U")
+        self.assertEqual(board.grid[5][8].letter.letter, "L")
+        self.assertEqual(board.grid[5][9].letter.letter, "T")
+        self.assertEqual(board.grid[5][10].letter.letter, "A")
+        self.assertEqual(board.grid[5][11].letter.letter, "D")
  
     
     """""

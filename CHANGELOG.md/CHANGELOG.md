@@ -380,6 +380,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
       -Created the validate_word_place_board function to validate the placement of a word on the board.
       -Implemented logic to check if the board is empty, and if so, utilized the word_in_the_center function to validate the placement
        of the word in the center.
+       
+## [0.0.32] - 2023-11-01
+
+
+### Added 
+
+      -Created the method 'deactivate_cell(sell)' where it changes the object's state to 'deactivated'.
+      -test_repr_with_letter(self) method created to verify the representation of a cell with a letter. Ensures that the representation 
+       is correct when a letter is provided.
+      -test_repr_word_multiplier(self) method created to verify the representation of a cell with a word multiplier. Ensures that 
+       the representation is correct when a word multiplier is provided.
+      -test_repr_letter_multiplier(self) method created to verify the representation of a cell with a letter multiplier. Ensures that
+       the representation is correct when a letter multiplier is provided.
+      -test_repr_empty(self) method created to verify the representation of an empty cell. Ensures that the representation is correct 
+       when the cell is empty.
+      -The method test_cell_multiplayer_letter(self) was created to test the functionality of multiplying a cell with a 
+       letter multiplier. It verifies that the cell correctly multiplies the value of the provided letter and the assigned 
+       letter multiplier."
+      -Introduced the take_tiles(self, amount, bag=BagTiles) method to allow players to draw a specific number of tiles from the 
+       tile bag. The drawn tiles are added to the player's rack for later use during the game.
+      -Implemented the set(self, tiles) method to check if a provided set of tiles can be formed using the tiles in the
+       player's rack. It ensures that the provided set of tiles is a subset of the available tiles in the player's rack.
+      -Added the set_joker(self) method to check if there is a Joker tile in the player's rack. It returns True if at least one tile 
+       in the rack is a Joker and False otherwise.
+      -Included the find_joker(self) method to find the position of the Joker tile in the player's rack. It returns the index of the 
+       first Joker tile found or False if there are no Joker tiles in the rack.
+      -Introduced the put_words_board(self, word, location, orientation) method to enable players to place words 
+       on the game board. The function utilizes a Transform object to convert the word into tiles and an Instrument object to manipulate
+       the position on the board.
+      
+      
+      
+### Removed
+
+       -"calculate_word_value"
+      
+
+
 
     
     
