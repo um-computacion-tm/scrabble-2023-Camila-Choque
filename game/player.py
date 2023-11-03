@@ -1,27 +1,22 @@
 
 from game.models import BagTiles
+
 class Player:
-    def __init__(self,name, bag_tiles):
+    def __init__(self,name):
         self.name = name
-        self.bag_tiles = bag_tiles
-        self.tiles = []
+        self.rack = []
         self.points = 0
         
 
-    def draw_tiles(self, bag, num_tiles):
-        if num_tiles <= len(bag.tiles):
-            self.tiles.extend(bag.tiles[:num_tiles])
-            del bag.tiles[:num_tiles]
 
-    def exchange_tiles(self, bag, tiles_to_exchange):
-        if all(tile in self.tiles for tile in tiles_to_exchange):
-            bag.tiles.extend(tiles_to_exchange)
-            self.tiles = [tile for tile in self.tiles if tile not in tiles_to_exchange]
+    def exchange_tiles(self,index,bag=BagTiles):
+        index = index - 1
+        tile_to_exchange = self.rack.pop(index)
+        new_tile = bag.take(1)
+        bag.put([tile_to_exchange])
+        self.rack.insert(index, new_tile)
+    
 
-            return True
-        else:
-            return False
-  
     def check_tile_in_hand(self, tile):
        return tile in self.tiles
    

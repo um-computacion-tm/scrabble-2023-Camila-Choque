@@ -1,7 +1,6 @@
 import unittest
 from game.models import (BagTiles,Tile)
 from unittest.mock import patch
-from game.models import JokerA,joker
 
 
 class TestTiles(unittest.TestCase):
@@ -10,29 +9,22 @@ class TestTiles(unittest.TestCase):
         self.assertEqual(tile.letter, 'A')
         self.assertEqual(tile.value, 1)
 
-class TestJoker(unittest.TestCase):
-    def test_joker_with_wildcard(self):
-        # Llama a la función joker con un carácter comodín '*' y una nueva letra 'A'
-        joker_instance = joker()
-        joker_instance.letter = "*"
+    def test_is_joker(self):
+        tile = Tile("?",0)
+        self.assertEqual(tile.is_joker(),True)
 
-        joker_instance.joker("A")
-
-        # Verifica que el resultado sea igual a 'A'
-        self.assertEqual(joker_instance.letter,"A")
-
-    def test_joker_without_wildcard(self):
-        joker_instance = joker()
-        joker_instance.joker("B")
-        with self.assertRaises(JokerA):
-            joker_instance.joker('C')
-
+    def  test_convert_tile(self):
+        tile = Tile("A",1)
+        tile.convert_tile("B",2)
+        self.assertEqual(tile.letter,"B")
+        self.assertEqual(tile.value,2)
 
 
 
 
 class TestBagTiles(unittest.TestCase):
     @patch('random.shuffle')
+
     def test_bag_tiles(self, patch_shuffle):
         bag = BagTiles()
         self.assertEqual(

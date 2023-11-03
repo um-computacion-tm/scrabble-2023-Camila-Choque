@@ -2,10 +2,12 @@ from game.models import Tile
 
 
 class Cell:
-    def __init__(self, multiplier , multiplier_type ):
+    def __init__(self, multiplier = 1, multiplier_type = "",letter = None, status = "active"):
         self.multiplier = multiplier
         self.multiplier_type = multiplier_type
-        self.letter = None
+        self.letter = letter
+        self.status = status
+        self.original_state = {'multiplier': multiplier, 'multiplier_type': multiplier_type, 'letter': letter, 'status': 'active'}
 
     def add_letter(self, letter:Tile):
         self.letter = letter
@@ -24,12 +26,13 @@ class Cell:
         return letter  # Devuelve la letra eliminada
     
     def __repr__(self):
-        if self.letter:
-            return repr(self.letter)
-        if self.multiplier > 1:
-            return f'{"W" if self.multiplier_type == "word" else "L"}x{self.multiplier}'
-        else:
-            return
+      if self.letter:
+        return repr(self.letter)
+      elif self.multiplier > 1:
+        return f'{"W" if self.multiplier_type == "word" else "L"}x{self.multiplier}'
+      else:
+         return '   '
+
         
     def deactive_cell(self):
         self.status = 'desactive'

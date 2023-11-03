@@ -1,25 +1,24 @@
 import random
 
-class JokerA(Exception):
-    pass 
+ 
 
 class Tile:
+
     def __init__(self, letter, value):
         self.letter = letter
         self.value = value
 
     
-class joker():  
-    def __init__(self):
-        self.letter = "*"
-        
-     #Cambia la letra de un objeto de la clase 
-    def joker(self, new_letter):
-        if self.letter == "*":
-            self.letter = new_letter
+       
+    def is_joker(self):
+        if self.value == 0:
+           return True
         else:
-            raise JokerA(Exception)
-
+            return False
+    
+    def convert_tile(self, new_letter,new_value):
+        self.letter = new_letter
+        self.value = new_value
 
 class BagTiles:
     #Constructor
@@ -80,13 +79,4 @@ class BagTiles:
 
         # Agregar las fichas predeterminadas a la bolsa
         #self.tiles.extend(self.default_tiles)
-    """
-        # Crear una lista para almacenar las fichas adicionales necesarias
-        total = []
-
-        # Crear un diccionario para contar cuántas fichas de cada letra tenemos en la bolsa actualmente
-        current_tiles_count = {letter: 0 for letter in initial_tiles.keys()}
-
-        # Contar las fichas actuales en la bolsa
-        for tile in self.tiles:
-            current_tiles_count[tile.letter] += 1"""
+   

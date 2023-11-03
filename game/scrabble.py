@@ -1,6 +1,7 @@
 from game.board import Board
 from game.player import Player
 from game.models import BagTiles
+from game.dictionary import Dictionary
 
 
 class ScrabbleGame:
@@ -9,9 +10,11 @@ class ScrabbleGame:
         self.bag_tiles = BagTiles()
         self.players = []
         for index in range(players_count):
-            self.players.append(Player(name=index, bag_tiles=self.bag_tiles))
+            self.players.append(Player(name= index +1))
         
         self.current_player = None
+        self.turn = 0
+        self.dict = Dictionary ()
 
 
     def next_turn(self):

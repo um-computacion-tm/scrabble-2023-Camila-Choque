@@ -415,6 +415,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
        -"calculate_word_value"
+       
+       
+### [0.0.33] - 2023-11-02
+
+
+### Added 
+     
+      -Test case test_validate_rack_true to verify if the set method of the Player class correctly validates a valid set of tiles 
+       on the player's rack. 
+      -Test case test_validate_rack_false to verify if the set method of the Player class correctly detects an invalid set of tiles on 
+       the player's rack.
+      -Created the convert_tile method along with its corresponding test.
+      -Added the player_exchange test case.
+      -Introduced new attributes and reorganized the order of functions and methods for improved organization
+      -Fixed several tests and functions.
+
+### Removed
+
+      -Deleted the draw_tiles method and its corresponding test.
+      -Removed the test_exchange_tiles test case.
+      -Eliminated the Joker class and its associated test.
+      -Removed the Joker A class.
       
 
 

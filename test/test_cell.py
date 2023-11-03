@@ -17,11 +17,8 @@ class TestCell(unittest.TestCase):
             cell.multiplier_type,
             'letter',
         )
-        self.assertIsNone(cell.letter)
-        self.assertEqual(
-            cell.calculate_value(),
-            0,
-        )
+        self.assertEqual(cell.letter,None)
+        
 
     def test_add_letter(self):
         cell = Cell(multiplier=1, multiplier_type='')
@@ -40,6 +37,10 @@ class TestCell(unittest.TestCase):
             cell.calculate_value(),
             6,
         )
+
+    def test_cell_letter(self):
+        cell = Cell(1, None)
+        self.assertEqual(cell.calculate_value(),0)
 
     def test_cell_multiplier_word(self):
         cell = Cell(multiplier=2, multiplier_type='word')
